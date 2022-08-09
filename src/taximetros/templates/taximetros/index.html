@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+
+{% block formulario %}
+  
+  <div>
+    <form action="" method="get">
+      {{formulario.as_p}}
+      <input type="submit" value="Buscar">
+    </form>
+  </div>
+
+{% endblock formulario %}
+
+
+{% block contenido %}
+
+    {% for item in basedatos %}
+        <div class="col-md-6">
+          <h2>{{item.nombre}}</h2>
+          <p>Precio: {{item.precio}}</p>
+          <p>Stock: {{item.stock}}</p>
+          <p>Descripcion: {{item.descripcion}}</p>
+        </div>
+    {% endfor %}
+
+    <div class="col-md-6">
+        <h2>Queres crear un nuevo taximetro?</h2>
+        <p><a href="{% url 'taximetros_crear' %}">Haz click aca!</a></p>
+    </div>
+
+{% endblock contenido %}

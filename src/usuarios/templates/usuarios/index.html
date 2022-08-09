@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+
+{% block formulario %}
+  
+  <div>
+    <form action="" method="get">
+      {{formulario.as_p}}
+      <input type="submit" value="Buscar">
+    </form>
+  </div>
+
+{% endblock formulario %}
+
+
+{% block contenido %}
+
+    {% for item in basedatos %}
+        <div class="col-md-6">
+          <h2>{{item.nombre}}</h2>
+          <p>{{item.mail}}</p>
+          <p>Distribuidor de Taximetros? {{item.dist_tax}}</p>
+          <p>Distribuidor de Tacografos? {{item.dist_tac}}</p>
+        </div>
+    {% endfor %}
+
+{% endblock contenido %}
