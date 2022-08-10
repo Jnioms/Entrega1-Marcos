@@ -26,14 +26,14 @@ db.sqlite3 Entrega1Marcos manage.py tacografos taximetros templates usuarios
 Luego hay que hacer las migraciones de los modelos para crear la base de datos
 
 ```
-> django-admin manage.py makemigrations
-> django-admin manage.py migrate
+> python manage.py makemigrations
+> python manage.py migrate
 ```
 
 Una vez hecho todo esto, ya esta listo para correrse. Por default hay que acceder a la web desde la ip 127.0.0.1:8000 (si no se cargan las variables de ejecucion)
 
 ```
-> django-admin manage.py runserver
+> python manage.py runserver
 ```
 
 Los index de las aplicaciones muestran todos los elementos de cada base de datos. Es posible que parezca vacio, pero una vez cargado los elementos, van a poder verse.
@@ -41,7 +41,7 @@ Los index de las aplicaciones muestran todos los elementos de cada base de datos
 
 ## Colabora
 
-Si encontras algun error o bug en la pagina, por favor ayudame a mejorar reportandolo en el repositorio. Muchas gracias! :)
+Si encontras algun error o bug en la pagina, por favor ayudame a mejorar reportandolo [en el repositorio](https://github.com/Jnioms/Entrega1-Marcos/issues). Muchas gracias! :)
 
 ## FAQs
 
@@ -63,7 +63,7 @@ Pueden crear un usuario administrador y agregarlos desde el panel ubicado en URL
 Para crear al superusuario hay que usar el comando 
 
 ```
-> django-admin manage.py createsuperuser
+> python manage.py createsuperuser
 ```
 
 Sino pueden crearse objetos usando los formularios ubicados en URL/taximetros/crear/, URL/tacografos/crear/ y URL/usuarios/crear/
